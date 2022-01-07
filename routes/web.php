@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::resource('/employee', EmployeeController::class);
 Route::get('login', [AuthController::class, 'index'])->name('login');
 Route::post('post-login', [AuthController::class, 'postLogin'])->name('login.post'); 
 Route::get('registration', [AuthController::class, 'registration'])->name('register');
